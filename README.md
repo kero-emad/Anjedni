@@ -1,70 +1,100 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Enjedni (أنجدني) 🚀
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+**Enjedni** is a modern, all-in-one service marketplace platform designed to provide hassle-free home services. Whether you need cleaning, plumbing, electrical work, or carpentry, Enjedni connects you with skilled professionals to ensure your home is well-maintained with speed and reliability.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Dual-User System**: Specialized roles for **Customers** and **Service Providers**.
+- **Service Requests**: Customers can easily post requests for specific home maintenance tasks.
+- **Provider Offers**: Skilled professionals can browse requests and submit competitive offers.
+- **Appointment Management**: Seamless scheduling and tracking of service appointments.
+- **Provider Portfolios**: Visual showcases of past work to build trust and ensure quality.
+- **Payment Integration**: Secure handling of payment details for completed services.
+- **Responsive Dashboard**: Intuitive management interfaces for both customers and providers.
+- **Clean UI**: Built with modern CSS frameworks for a premium user experience.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Tech Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Backend**: [Laravel 11.x](https://laravel.com/) (PHP 8.2+)
+- **Frontend**: [Tailwind CSS](https://tailwindcss.com/) & [Bootstrap 5](https://getbootstrap.com/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Database**: MySQL / PostgreSQL / SQLite
+- **Environment**: Laravel Sail (optional Docker environment)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 Getting Started
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Follow these steps to set up Enjedni locally:
 
-### Premium Partners
+### 1. Clone the repository
+```bash
+git clone https://github.com/Kero-Emad/Anjedni.git
+cd Anjedni
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 2. Install Dependencies
+```bash
+# Install PHP dependencies
+composer install
 
-## Contributing
+# Install Frontend dependencies
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Environment Configuration
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+*Update your `.env` file with your database credentials.*
 
-## Code of Conduct
+### 4. Database Setup
+```bash
+php artisan migrate --seed
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 5. Start the Application
+```bash
+# Run the development server
+php artisan serve
 
-## Security Vulnerabilities
+# Run Vite for frontend assets
+npm run dev
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🏗️ Project Architecture
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Enjedni
->>>>>>> cab99338e41f8394327314c31898ad4a46b48531
+The project follows the standard **Laravel MVC (Model-View-Controller)** pattern:
+
+- **Models**: `User`, `ServiceRequest`, `Offer`, `Appointment`, `Payment`, `PortfolioImage`.
+- **Controllers**: Handlers for auth, service management, and scheduling.
+- **Views**: Blade templates styled with Tailwind and Bootstrap.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to improve Enjedni, please follow these steps:
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<p align="center">Made with ❤️ for a better home experience.</p>
